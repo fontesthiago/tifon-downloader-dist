@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+
+  /* centralização total */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+/* painel principal (card) */
+#app {
+  width: 800px;
+  max-width: 100%;
+  padding: 15px;
+  overflow: hidden; 
+
+  background: #0b1220;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* título */
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* abas */
+.tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  font-size: 11px;
+  transition: 0.2s;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #6366f1, #22c55e);
+  font-weight: bold;
+}
+
+/* conteúdo abas */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* título interno */
+.section-title {
+  font-size: 12px;
+  margin: 10px 0;
+  opacity: 0.8;
+}
+
+/* inputs */
+input {
+  width: 100%;
+  margin-top: 5px;
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  background: #1e293b;
+  color: white;
+}
+
+/* seção */
+.section {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+/* opções */
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.chk-download {
+  width: auto;
+}
+
+/* vazio */
+.empty {
+  text-align: center;
+  opacity: 0.6;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.course-item {
+  flex-direction: column; /* 🔥 ESSENCIAL */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #1e293b;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+
+  font-size: 12px;
+}
+
+.course-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.course-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: #334155;
+  transition: 0.2s;
+}
+
+.icon-btn:hover {
+  background: #475569;
+}
+
+.icon-delete {
+  background: #7f1d1d;
+}
+
+.icon-delete:hover {
+  background: #b91c1c;
+}
+
+.files-list {
+  margin-top: 6px;
+  padding-left: 10px;
+  border-left: 2px solid #334155;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin: 4px 0;
+  opacity: 0.9;
+}
+
+.file-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-status {
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.file-item {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  align-items: center;
+  gap: 8px;
+
+  padding: 6px 0;
+  border-bottom: 1px solid #334155;
+
+  font-size: 11px;
+}
+
+/* remove última linha */
+.file-item:last-child {
+  border-bottom: none;
+}
+
+.file-status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* cores */
+.status-red {
+  background: #ef4444;
+}
+
+.status-yellow {
+  background: #facc15;
+}
+
+.status-green {
+  background: #22c55e;
+}
+
+.file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-actions {
+  display: flex;
+  gap: 6px;
+}
+.file-item:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+/* =========================
+   BARRA DE PROGRESSO
+========================= */
+
+.progress-wrapper {
+  margin-bottom: 14px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 14px;
+
+  background: #1e293b;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  border: 1px solid #334155;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+
+  background: linear-gradient(90deg, #22c55e, #6366f1);
+
+  transition: width 0.3s ease;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Gerenciador de Downloads</title>
+
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+  <div id="app">
+
+    <h3>TIFON DOWNLOADER</h3>
+
+    <!-- BOTÕES DE ABA -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="options">⚙️ Opções</button>
+      <button class="tab-btn" data-tab="collected">📚 Coletados</button>
+    </div>
+
+    <!-- ===================== -->
+    <!-- ABA: OPÇÕES -->
+    <!-- ===================== -->
+    <div class="tab-content active" id="tab-options">
+
+      <div class="section-title">Opções de download</div>
+
+      <div class="options">
+
+        <label><input type="checkbox" class="chk-download" id="checkLivroEletronicoS"> Livro Eletrônico
+          Simplificado</label>
+        <label><input type="checkbox" class="chk-download" id="checkLivroEletronicoO"> Livro Eletrônico Original</label>
+        <label><input type="checkbox" class="chk-download" id="checkLivroEletronicoM"> Livro Eletrônico Marcado</label>
+        <label><input type="checkbox" class="chk-download" id="checkMapa"> Mapa Mental</label>
+        <label><input type="checkbox" class="chk-download" id="checkResumo"> Resumo</label>
+        <label><input type="checkbox" class="chk-download" id="checkSlide"> Slide</label>
+        <label><input type="checkbox" class="chk-download" id="checkMp4"> Baixar MP4</label>
+        <label><input type="checkbox" class="chk-download" id="checkMp3"> Baixar MP3</label>
+      </div>
+
+      <div class="section">
+
+        <label>Começar na aula:</label>
+        <input type="number" id="aulaInicial" value="0" min="0" max="999">
+
+        <label>Terminar na aula:</label>
+        <input type="number" id="aulaFinal" value="99" min="0" max="999">
+
+      </div>
+
+    </div>
+
+    <!-- ===================== -->
+    <!-- ABA: COLETADOS -->
+    <!-- ===================== -->
+    <div class="tab-content" id="tab-collected">
+
+      <!-- BARRA -->
+      <div class="progress-wrapper">
+
+        <div class="progress-info">
+          <span id="progress-text">0%</span>
+          <span id="progress-counts">0 arquivos</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+      </div>
+
+      <!-- LISTA -->
+      <div id="courses-list"></div>
+
+    </div>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+
+</body>
+
+</html>
